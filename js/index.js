@@ -1,3 +1,5 @@
+import { click } from './click.js';
+
 // Configuration
 
 
@@ -8,10 +10,6 @@ const arekclick = 'arekclick';
 // vars and imports
 
 let arek = 0;
-
-
-
-import { click } from "./click";
 
 
 
