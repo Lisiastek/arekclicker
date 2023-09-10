@@ -15,5 +15,7 @@ let arek = 0;
 
 
 window.addEventListener("DOMContentLoaded", function(){
-    document.getElementById(arekclick).onclick = click; 
+    document.getElementById(arekclick).onclick = function(){
+        arek = click(arek);
+    }; 
 })
