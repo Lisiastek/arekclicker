@@ -1,9 +1,11 @@
-
+// Configuration
 
 
 const arekclick = 'arekclick';
 
 
+
+// vars and imports
 
 let arek = 0;
 
