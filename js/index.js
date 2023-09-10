@@ -9,11 +9,8 @@ let arek = 0;
 
 
 
-const click = function(){
-    arek += 1;
-    alert(arek);
+import { click } from "./click";
 
-}
 
 
 window.addEventListener("DOMContentLoaded", function(){
