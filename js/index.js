@@ -61,7 +61,6 @@ class GameCLASS{
                 click(Game)
             }; 
         })
-        this.render();
         setInterval(() => {
             every100ms(Game);
         }, 100);
@@ -73,6 +72,7 @@ class GameCLASS{
 }
 
 let Game = new GameCLASS();
+Game.render();
 // commands management
 window.game = {
     earn(amount){
