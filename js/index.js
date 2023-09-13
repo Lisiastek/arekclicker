@@ -24,21 +24,22 @@ class GameCLASS{
         else
             this._arek = 0;
     }
+    constructor(){
+        window.addEventListener("DOMContentLoaded", function(){
+            document.getElementById(arekclick).onclick = function(){
+                click(Game)
+            }; 
+        })
+    }
     
 
 }
 
 let Game = new GameCLASS();
 window.game = {
-    earn(){
+    earn(amount){
             Game._cheat = true;
             Game.Earn(amount);
         }
 
 };
-
-window.addEventListener("DOMContentLoaded", function(){
-    document.getElementById(arekclick).onclick = function(){
-        click(Game)
-    }; 
-})
