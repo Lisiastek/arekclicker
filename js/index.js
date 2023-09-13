@@ -46,6 +46,9 @@ window.game = {
     earn(amount){
             Game._cheat = true;
             Game.earn(amount);
-        }
+        },
+    showAlert(){
+        document.getElementById('blank').style.display = "block";
+    }
 
 };
