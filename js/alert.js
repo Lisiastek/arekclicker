@@ -13,4 +13,9 @@ export function alertShow(){
     const blankMessage = document.createElement('div');
     blank.appendChild(blankMessage);
 
+    blankMessage.innerHTML = "Test";
+
+
+    document.body.appendChild(blank);
+
 }
