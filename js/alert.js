@@ -5,10 +5,12 @@ export function alertShow(){
     blank.style.height = "100vh";
     blank.style.width = "100vw";
     blank.style.zIndex = "5";
-    blank.style.position = "static";
+    blank.style.position = "fixed";
     blank.style.display = "flex";
     blank.style.justifyContent = "center";
     blank.style.alignContent = "center";
+    blank.style.right = "0";
+    blank.style.left = "0";
 
     const blankMessage = document.createElement('div');
     blank.appendChild(blankMessage);
