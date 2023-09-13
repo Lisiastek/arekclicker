@@ -10,9 +10,8 @@ export function alertShow(){
     blank.style.top = "0";
     blank.id = "blank";
     blank.style['backdrop-filter'] = 'blur(4px)';
-    blank.style['alignContent'] = "center";
-    blank.style['justifyContent'] = "center";
-
+    blank.style.alignItems = "center";
+    blank.style.justifyItems = "center";
 
     const blankMessage = document.createElement('div');
     blank.appendChild(blankMessage);
@@ -29,8 +28,8 @@ export function alertShow(){
 
     blankMessage.style.background = 'cyan';
     blankMessage.style.borderRadius = "10%";
-    blankMessage.style.width = "40%";
-    blankMessage.style.height = "15%";
+    blankMessage.style.width = "50%";
+    blankMessage.style.height = "50%";
     blankMessage.style.padding = "0.3%";
 
 
