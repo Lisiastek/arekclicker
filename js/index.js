@@ -29,7 +29,7 @@ class GameCLASS{
 }
 
 let Game = new GameCLASS();
-const game = {
+window.game = {
     earn(){
             Game._cheat = true;
             Game.Earn(amount);
