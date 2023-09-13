@@ -15,6 +15,8 @@ class GameCLASS{
     Earn(amount) {
         _arek += amount;
     }
+    
+
     get arek(){return this.arek;}
     set arek(value){
         if(value > 0)
@@ -27,6 +29,15 @@ class GameCLASS{
 }
 
 let Game = new GameCLASS();
+const game = {
+    _game = Game,
+    earn : {
+        command(amount){
+            _game._cheat = true;
+            _game.Earn(amount);
+        }
+    }
+}
 
 window.addEventListener("DOMContentLoaded", function(){
     document.getElementById(arekclick).onclick = function(){
