@@ -1,5 +1,5 @@
+// imports from another files
 import { click } from './click.js';
-// bosh
 
 // Configuration
 
@@ -7,10 +7,13 @@ import { click } from './click.js';
 const arekclick = 'arekclick';
 
 
+// final program
+
+// main class
 class GameCLASS{
     _arek = 0;
-    _arekgained = 0;
-    _cheat = false;
+    _arekgained = 0; // total amount of coins gained
+    _cheat = false; // is cheats was used
 
     earn(amount) {
         this._arek += amount;
@@ -36,10 +39,11 @@ class GameCLASS{
 }
 
 let Game = new GameCLASS();
+// commands management
 window.game = {
     earn(amount){
             Game._cheat = true;
-            Game.Earn(amount);
+            Game.earn(amount);
         }
 
 };
