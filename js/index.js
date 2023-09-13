@@ -29,7 +29,7 @@ class GameCLASS{
         this._areklost += amount;
     }
     render(){
-        arekrender();
+        arekrender(Game);
     }
     
 

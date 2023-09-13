@@ -1,8 +1,8 @@
-export function arekrender(){
-    renderinfounder();
+export function arekrender(Game){
+    renderinfounder(Game);
 }
 
-function renderinfounder(){
+function renderinfounder(Game){
     // render number of coins
     let arekC = document.getElementById('arekC');
     arekC.innerHTML;
