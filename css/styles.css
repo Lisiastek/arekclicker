@@ -12,7 +12,6 @@
 
 #left {
     width: 30%;
-    background-color: aqua;
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
@@ -21,7 +20,9 @@
 
 #center {
     width: 50%;
-    background-color: rgb(41, 163, 163);
+
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 #centerG {
@@ -36,9 +37,15 @@
 
 #right {
     width: 20%;
-    background-color: aqua;
+    text-align: center;
+
+    padding-top: 20px;
 }
 
 #arekclick {
     width: 387px;
+}
+
+#arekPS {
+    text-align: center;
 }
