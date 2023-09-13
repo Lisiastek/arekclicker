@@ -25,14 +25,23 @@ export function alertShow(){
         do zapisu postępu w grze.
         <br /></br >
         <h3>Klikając "Akceptuję" obwieszczam że zapoznałem się z sprawami tutaj napisanymi i się z nimi zgadzam.<h3>
-        <button id='buttonblankmessage' onclick='acceptblank()' style='padding: 10px;outline: none; background: none;border: none; border: 1px solid rgb(5, 203, 117);'>Akceptuję</button>`;
+        <button id='buttonblankmessage' onclick='acceptblank()' style='color:rgb(219, 111, 4);font-size: 25px;height: 60px;transition: 0.5s;width: 80%;margin: 0px auto;padding: 10px;outline: none; background: none;border: none; border: 1px solid rgb(5, 203, 117);'>Akceptuję</button>`;
 
     blankMessage.style.background = 'cyan';
     blankMessage.style.borderRadius = "10%";
     blankMessage.style.width = "50%";
-    blankMessage.style.height = "400px";
+    // blankMessage.style.height = "400px";
     blankMessage.style.padding = "2%";
-    // let button = document.getElementById('buttonblankmessage'); 
+    let button = document.getElementById('buttonblankmessage'); 
+    button.addEventListener('mouseover',function(){
+        button.style.fontSize = "35px;"
+     })
+    button.addEventListener('mouseleave',function(){
+        button.style.fontSize = "25px;"
+    })
+    button.addEventListener('onclick', function(){
+        document.body.removeChild(blank);
+    })
     // button.innerHTML = "Akceptuję";
 
 
