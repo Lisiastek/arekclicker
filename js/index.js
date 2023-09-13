@@ -1,6 +1,7 @@
 // imports from another files
 import { click } from './click.js';
 import { alertShow} from './alert.js';
+import { every100ms } from './every100ms.js';
 
 // Configuration
 
@@ -34,6 +35,9 @@ class GameCLASS{
                 click(Game)
             }; 
         })
+        setInterval(() => {
+            every100ms(Game);
+        }, 100);
         alertShow();
     }
     
