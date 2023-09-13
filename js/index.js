@@ -2,6 +2,7 @@
 import { click } from './click.js';
 import { alertShow} from './alert.js';
 import { every100ms } from './every100ms.js';
+import { arekrender } from './arekrender.js';
 
 // Configuration
 
@@ -15,10 +16,15 @@ const arekclick = 'arekclick';
 class GameCLASS{
     _arek = 0;
     _arekgained = 0; // total amount of coins gained
+    _plusarekclick = 1;
+    _plusareksec = 0;
     _cheat = false; // is cheats was used
 
     earn(amount) {
         this._arek += amount;
+    }
+    render(){
+        arekrender();
     }
     
 
@@ -29,6 +35,7 @@ class GameCLASS{
         else
             this._arek = 0;
     }
+    
     constructor(){
         window.addEventListener("DOMContentLoaded", function(){
             document.getElementById(arekclick).onclick = function(){
