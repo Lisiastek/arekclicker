@@ -16,12 +16,17 @@ const arekclick = 'arekclick';
 class GameCLASS{
     _arek = 0;
     _arekgained = 0; // total amount of coins gained
+    _areklost = 0;
     _plusarekclick = 1;
     _plusareksec = 0;
     _cheat = false; // is cheats was used
 
     earn(amount) {
         this._arek += amount;
+        if(amount > 0)
+        this._arekgained += amount;
+        else
+        this._areklost += amount;
     }
     render(){
         arekrender();
@@ -35,6 +40,13 @@ class GameCLASS{
         else
             this._arek = 0;
     }
+    get plusarekclick(){return this._plusarekclick;}
+    set plusarekclick(value){
+        if(value > 0)
+            this._plusarekclick = Number(value);
+        else
+            this._plusarekclick = 0;
+    }   
     
     constructor(){
         window.addEventListener("DOMContentLoaded", function(){
