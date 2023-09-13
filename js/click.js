@@ -1,5 +1,4 @@
-export function click(arek){
-    arek += 1;
-    alert(arek);
-    return arek
+export function click(Game){
+    Game.earn(1);
+    alert(Game.arek);
 }
