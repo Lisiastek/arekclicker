@@ -12,7 +12,7 @@ class GameCLASS{
     _arekgained = 0;
     _cheat = false;
 
-    Earn(amount) {
+    earn(amount) {
         _arek += amount;
     }
     
@@ -30,7 +30,7 @@ class GameCLASS{
 
 let Game = new GameCLASS();
 const game = {
-    _game = Game,
+    _game: Game,
     earn : {
         command(amount){
             _game._cheat = true;
