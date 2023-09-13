@@ -48,7 +48,7 @@ window.game = {
             Game.earn(amount);
         },
     showAlert(){
-        document.getElementById('blank').style.display = "block";
+        document.getElementById('blank').style.display = "flex";
     }
 
 };
