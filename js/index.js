@@ -17,7 +17,7 @@ class GameCLASS{
     }
     
 
-    get arek(){return this.arek;}
+    get arek(){return this._arek;}
     set arek(value){
         if(value > 0)
             this._arek = Number(value);
