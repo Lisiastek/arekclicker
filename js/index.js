@@ -61,11 +61,12 @@ class GameCLASS{
                 click(Game)
             }; 
         })
+        this.render();
         setInterval(() => {
             every100ms(Game);
         }, 100);
         alertShow();
-        this.render();
+
     }
     
 
