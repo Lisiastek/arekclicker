@@ -1,6 +1,6 @@
 // imports from another files
 import { click } from './click.js';
-import { alertShow, acceptBlank} from './alert.js';
+import { alertShow} from './alert.js';
 
 // Configuration
 

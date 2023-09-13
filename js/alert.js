@@ -1,8 +1,3 @@
-export function acceptBlank(){
-    let temp = document.getElementById("blank");
-    temp.style.display = "none";
-}
-acceptBlank = acceptBlank
 export function alertShow(){
     const blank = document.createElement('div');
     blank.style.background = "rgba(0,0,0,0.75)";
@@ -32,7 +27,7 @@ export function alertShow(){
         do zapisu postępu w grze.
         <br /></br >
         <h3>Klikając "Akceptuję" obwieszczam że zapoznałem się z sprawami tutaj napisanymi i się z nimi zgadzam.<h3>
-        <button id='buttonblankmessage' onclick='acceptBlank()' style='color:rgb(219, 111, 4);font-size: 25px;height: 60px;transition: 0.5s;width: 80%;margin: 0px auto;padding: 10px;outline: none; background: none;border: none; border: 1px solid rgb(5, 203, 117);'>Akceptuję</button>`;
+        <button id='buttonblankmessage' onclick='document.getElementById("blank").style.display = "none";' style='color:rgb(219, 111, 4);font-size: 25px;height: 60px;transition: 0.5s;width: 80%;margin: 0px auto;padding: 10px;outline: none; background: none;border: none; border: 1px solid rgb(5, 203, 117);'>Akceptuję</button>`;
 
     blankMessage.style.background = 'cyan';
     blankMessage.style.position = 'relative';
