@@ -1,6 +1,6 @@
 // imports from another files
 import { click } from './click.js';
-import { alertshow } from './alert.js';
+import { alertShow } from './alert.js';
 
 // Configuration
 
@@ -34,7 +34,7 @@ class GameCLASS{
                 click(Game)
             }; 
         })
-        alertshow();
+        alertShow();
     }
     
 

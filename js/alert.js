@@ -6,4 +6,11 @@ export function alertShow(){
     blank.style.width = "100vw";
     blank.style.zIndex = "5";
     blank.style.position = "static";
+    blank.style.display = "flex";
+    blank.style.justifyContent = "center";
+    blank.style.alignContent = "center";
+
+    const blankMessage = document.createElement('div');
+    blank.appendChild(blankMessage);
+
 }
