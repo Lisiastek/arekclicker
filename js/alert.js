@@ -12,6 +12,7 @@ export function alertShow(){
     blank.style['backdrop-filter'] = 'blur(4px)';
     blank.style.alignItems = "center";
     blank.style.justifyItems = "center";
+    blank.style.justifyContent = "center";
 
     const blankMessage = document.createElement('div');
     blank.appendChild(blankMessage);
@@ -24,13 +25,15 @@ export function alertShow(){
         do zapisu postępu w grze.
         <br /></br >
         <h3>Klikając "Akceptuję" obwieszczam że zapoznałem się z sprawami tutaj napisanymi i się z nimi zgadzam.<h3>
-        <button onclick='acceptblank()'></button>`;
+        <button id='buttonblankmessage' onclick='acceptblank()' style='padding: 10px;outline: none; background: none;border: none; border: 1px solid rgb(5, 203, 117);'>Akceptuję</button>`;
 
     blankMessage.style.background = 'cyan';
     blankMessage.style.borderRadius = "10%";
     blankMessage.style.width = "50%";
-    blankMessage.style.height = "50%";
-    blankMessage.style.padding = "0.3%";
+    blankMessage.style.height = "400px";
+    blankMessage.style.padding = "2%";
+    // let button = document.getElementById('buttonblankmessage'); 
+    // button.innerHTML = "Akceptuję";
 
 
     document.body.appendChild(blank);
