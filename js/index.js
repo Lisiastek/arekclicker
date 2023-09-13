@@ -13,7 +13,7 @@ class GameCLASS{
     _cheat = false;
 
     earn(amount) {
-        _arek += amount;
+        this._arek += amount;
     }
     
 
@@ -30,14 +30,12 @@ class GameCLASS{
 
 let Game = new GameCLASS();
 const game = {
-    _game: Game,
-    earn : {
-        command(amount){
-            _game._cheat = true;
-            _game.Earn(amount);
+    earn(){
+            Game._cheat = true;
+            Game.Earn(amount);
         }
-    }
-}
+
+};
 
 window.addEventListener("DOMContentLoaded", function(){
     document.getElementById(arekclick).onclick = function(){
