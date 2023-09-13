@@ -65,6 +65,7 @@ class GameCLASS{
             every100ms(Game);
         }, 100);
         alertShow();
+        this.render();
     }
     
 
