@@ -47,6 +47,13 @@ class GameCLASS{
         else
             this._plusarekclick = 0;
     }   
+    get plusareksec(){return this._plusareksec;}
+    set plusareksec(value){
+        if(value > 0)
+            this._plusareksec = Number(value);
+        else
+            this._plusareksec = 0;
+    }   
     
     constructor(){
         window.addEventListener("DOMContentLoaded", function(){
@@ -70,6 +77,14 @@ window.game = {
             Game._cheat = true;
             Game.earn(amount);
         },
+    setPlusArekSec(amount){
+        Game._cheat = true;
+        Game.plusareksec = amount;
+    },
+    setPlusArekClick(amount){
+        Game._cheat = true;
+        Game.plusarekclick = amount;
+    },
     showAlert(){
         document.getElementById('blank').style.display = "flex";
     }
