@@ -26,7 +26,7 @@ class GameCLASS{
 
 }
 
-let Game = GameCLASS();
+let Game = new GameCLASS();
 
 window.addEventListener("DOMContentLoaded", function(){
     document.getElementById(arekclick).onclick = function(){
