@@ -32,6 +32,12 @@ export function alertShow(){
     blankMessage.style.width = "50%";
     // blankMessage.style.height = "400px";
     blankMessage.style.padding = "2%";
+    // button.innerHTML = "Akceptuję";
+
+
+    document.body.appendChild(blank);
+
+
     let button = document.getElementById('buttonblankmessage'); 
     button.addEventListener('mouseover',function(){
         button.style.fontSize = "35px;"
@@ -42,9 +48,4 @@ export function alertShow(){
     button.addEventListener('onclick', function(){
         document.body.removeChild(blank);
     })
-    // button.innerHTML = "Akceptuję";
-
-
-    document.body.appendChild(blank);
-
 }
