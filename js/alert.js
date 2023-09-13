@@ -26,7 +26,7 @@ export function alertShow(){
         Dodatkowo strona zbiera pliki cookies które są wymagane do prawidłowego działania tej strony. Wszelakie pliki cookies są używane wyłącznie
         do zapisu postępu w grze.
         <br /></br >
-        <h3>Klikając "Akceptuję" obwieszczam że zapoznałem się z sprawami tutaj napisanymi i się z nimi zgadzam.<h3>
+        <h3>Klikając "Akceptuję" obwieszczam że zapoznałem się ze sprawami tutaj napisanymi i się z nimi zgadzam.<h3>
         <button id='buttonblankmessage' onclick='document.getElementById("blank").style.display = "none";' style='color:rgb(219, 111, 4);font-size: 25px;height: 60px;transition: 0.5s;width: 80%;margin: 0px 10%;padding: 10px;outline: none; background: none;border: none; border: 1px solid rgb(5, 203, 117);'>Akceptuję</button>`;
 
     blankMessage.style.background = 'cyan';
