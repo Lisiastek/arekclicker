@@ -17,6 +17,11 @@ export function alertShow(){
     const blankMessage = document.createElement('div');
     blank.appendChild(blankMessage);
 
+    function acceptBlank(){
+        let temp = document.getElementById("blank");
+        temp.style.display = "none";
+    }
+
     blankMessage.innerHTML = `<h2>Informacja</h2>
         <p>Gra jest w celach edukacyjnych, <b>nie ma na celu szkalowania żadnej osoby</b> w tym zwłaszcza osób tutaj przedstawionych,
         wszelakie zdjęcia oraz informacje tutaj są zamieszczone w ramach żartu, nie należy ich brać na poważnie. 
@@ -25,7 +30,7 @@ export function alertShow(){
         do zapisu postępu w grze.
         <br /></br >
         <h3>Klikając "Akceptuję" obwieszczam że zapoznałem się z sprawami tutaj napisanymi i się z nimi zgadzam.<h3>
-        <button id='buttonblankmessage' onclick='acceptblank()' style='color:rgb(219, 111, 4);font-size: 25px;height: 60px;transition: 0.5s;width: 80%;margin: 0px auto;padding: 10px;outline: none; background: none;border: none; border: 1px solid rgb(5, 203, 117);'>Akceptuję</button>`;
+        <button id='buttonblankmessage' onclick='acceptBlank()' style='color:rgb(219, 111, 4);font-size: 25px;height: 60px;transition: 0.5s;width: 80%;margin: 0px auto;padding: 10px;outline: none; background: none;border: none; border: 1px solid rgb(5, 203, 117);'>Akceptuję</button>`;
 
     blankMessage.style.background = 'cyan';
     blankMessage.style.borderRadius = "10%";
@@ -38,14 +43,5 @@ export function alertShow(){
     document.body.appendChild(blank);
 
 
-    let button = document.getElementById('buttonblankmessage'); 
-    button.addEventListener('mouseover',function(){
-        button.style.fontSize = "35px;"
-     })
-    button.addEventListener('mouseleave',function(){
-        button.style.fontSize = "25px;"
-    })
-    button.addEventListener('onclick', function(){
-        document.body.removeChild(blank);
-    })
+
 }
