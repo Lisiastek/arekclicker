@@ -47,6 +47,7 @@
     transition: scale 0.5s;
     outline: none;
     background: none;
+    border: none;
 }
 #arekclick:active {
     transform:scale(65%) rotate(-5deg);

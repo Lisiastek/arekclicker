@@ -39,6 +39,9 @@ class GameCLASS{
     render(){
         arekrender(Game);
     }
+    simulateclick(){
+        click(Game)
+    }
     
     // safe way to access coins (arekCoins)
     get arek(){return this._arek;}
