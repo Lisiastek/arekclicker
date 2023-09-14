@@ -6,7 +6,10 @@ export function arekrender(Game){
 
 function renderArek(Game){
     let arek = document.getElementById('arekclick');
-    arek.innerHTML = "<img src='../img/arekliker2.png' alt='arek' style='width: 100%;height:100%;'>";
+    let newstring = `<img src='../img/${Game.costume}.png' alt='arek' style='width: 100%;height:100%;'>`;
+    if(newstring!= arek.innerHTML){
+        arek.innerHTML = newstring;
+    }
 }
 
 function renderinfounder(Game){

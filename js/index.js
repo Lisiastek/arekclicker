@@ -20,6 +20,12 @@ class GameCLASS{
     _plusarekclick = 1; // amount of coins that you get after click
     _plusareksec = 0; // amount of coins that you get after one sec 
     _cheat = false; // is cheats was used
+    _costume = 'arekliker2';
+
+    // safe way to get costume
+    get costume(){
+        return this._costume;
+    }
 
     // earn particular amount of coins, amount means here amount of this coins
     earn(amount) {
