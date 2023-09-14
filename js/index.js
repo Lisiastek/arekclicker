@@ -21,6 +21,8 @@ class GameCLASS{
     _plusareksec = 0; // amount of coins that you get after one sec 
     _cheat = false; // is cheats was used
     _costume = 'arekliker2';
+    _canvasBackground = false;
+    _canvasBackgroundContext = false;
 
     // safe way to get costume
     get costume(){
@@ -77,7 +79,15 @@ class GameCLASS{
             // adding on clicks
             document.getElementById(arekclick).onclick = function(){
                 click(Game)
+
+            // canvas background
+            this._canvasBackground = document.getElementById('canvasBackground');
+            this._canvasBackgroundContext = this._canvasBackground.getContext();
+
             }; 
+
+            
+            
         })
 
         // adding automatic updating
