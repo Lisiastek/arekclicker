@@ -80,11 +80,13 @@ class GameCLASS{
             document.getElementById(arekclick).onclick = function(){
                 click(Game)
 
-            // canvas background
-            this._canvasBackground = document.getElementById('canvasBackground');
-            this._canvasBackgroundContext = this._canvasBackground.getContext();
+            
 
             }; 
+
+            // canvas background
+            this._canvasBackground = document.getElementById('backgroundCanvas');
+            this._canvasBackgroundContext = this._canvasBackground.getContext("2d");
 
             
             
