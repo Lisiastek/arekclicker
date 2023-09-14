@@ -3,7 +3,6 @@ import { click } from './click.js';
 import { alertShow} from './alert.js';
 import { every100ms } from './every100ms.js';
 import { arekrender } from './arekrender.js';
-import { idle } from './idle.js';
  
 // Configuration
 
