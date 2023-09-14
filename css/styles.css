@@ -45,11 +45,14 @@
 #arekclick {
     transform:scale(60%);
     transition: scale 0.5s;
-    background-image: url("../img/arekliker2.png");
 }
 #arekclick:active {
     transform:scale(65%);
     transition: scale 0.5s;
+}
+#arekclick img {
+    height: 100%;
+    width: 100%;
 }
 
 #arekPS {
