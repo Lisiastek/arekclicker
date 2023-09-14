@@ -1,5 +1,12 @@
 export function arekrender(Game){
     renderinfounder(Game);
+    renderArek(Game);
+}
+
+
+function renderArek(Game){
+    let arek = document.getElementById('arekclick');
+    arek.style.backgroundImage = "../img/arekliker2.png";
 }
 
 function renderinfounder(Game){
