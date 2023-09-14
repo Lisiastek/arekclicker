@@ -6,7 +6,7 @@ export function arekrender(Game){
 
 function renderArek(Game){
     let arek = document.getElementById('arekclick');
-    arek.style.backgroundImage = "../img/arekliker2.png";
+    arek.innerHTML = "<img src='../img/arekliker2.png' alt='arek' style='width: 100%;height:100%;'>";
 }
 
 function renderinfounder(Game){
