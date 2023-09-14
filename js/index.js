@@ -3,7 +3,8 @@ import { click } from './click.js';
 import { alertShow} from './alert.js';
 import { every100ms } from './every100ms.js';
 import { arekrender } from './arekrender.js';
-
+import { idle } from './idle.js';
+ 
 // Configuration
 
 
@@ -20,6 +21,7 @@ class GameCLASS{
     _plusarekclick = 1;
     _plusareksec = 0;
     _cheat = false; // is cheats was used
+    _idletime = 0;
 
     earn(amount) {
         this._arek += amount;
@@ -54,6 +56,10 @@ class GameCLASS{
         else
             this._plusareksec = 0;
     }   
+
+    inactivityfunc(){
+        document.title = "AC: " + this._arek;
+    }
     
     constructor(){
         window.addEventListener("DOMContentLoaded", function(){
@@ -65,6 +71,19 @@ class GameCLASS{
             every100ms(Game);
         }, 100);
         alertShow();
+
+        document.addEventListener('visibilitychange',
+        () => {
+            if(document.hidden){
+                this._temptitle = document.title;
+                document.title = "AC: " + this._arek;
+                this._tempinactivityfunc = setInterval(this.inactivityfunc, 1000);
+            }
+            else {
+                document.title = this._temptitle;
+                clearInterval(this._tempinactivityfunc)
+            }
+        });
 
     }
     
