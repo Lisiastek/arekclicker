@@ -69,3 +69,31 @@ body > canvas {
     height: 100vh;
     width: 100vw;
 }
+
+
+.text28{
+    display: inline;
+    color: red;
+}
+.text56 {
+    display: inline;
+    animation: anim58 0.5s 1s infinite;
+}
+@keyframes anim58 {
+    0% {
+        color: rgb(0, 0, 0);
+        font-size: 1em;
+    }
+    25% {
+        color: rgb(192, 37, 37);
+        font-size: 1.025em;
+    }
+    50% {
+        color: rgb(222, 18, 18);
+        font-size: 1.075em;
+    }
+    100% {
+        color: rgb(102, 55, 55);
+        font-size: 1.1em;
+    }
+}
