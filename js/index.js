@@ -128,12 +128,14 @@ class GameCLASS{
 }
 
 let Game = new GameCLASS(); // declare game
-Game.render(); // first render to make game faster available
 
 // function to change locaction (not exactly that function but function that redirects onclicks to actual function)
 function changeLocactionCenter(Locaction){
     changeLocaction(Game, Locaction);
-}
+};
+
+
+Game.render(); // first render to make game faster available
 
 // commands management (from console)
 window.game = {
