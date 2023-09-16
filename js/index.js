@@ -130,10 +130,6 @@ class GameCLASS{
 let Game = new GameCLASS(); // declare game
 
 // function to change locaction (not exactly that function but function that redirects onclicks to actual function)
-function changeLocactionCenter(Locaction){
-    changeLocaction(Game, Locaction);
-};
-
 
 Game.render(); // first render to make game faster available
 
@@ -153,6 +149,9 @@ window.game = {
     setPlusArekClick(amount){
         Game._cheat = true;
         Game.plusarekclick = amount;
+    },
+    enterLocaction(locaction){
+        changeLocaction(Game, Locaction);   
     },
     // forcefully show alert that had you got at the beginning
     showAlert(){
