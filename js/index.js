@@ -3,6 +3,7 @@ import { click } from './click.js';
 import { alertShow} from './alert.js';
 import { every100ms } from './every100ms.js';
 import { arekrender } from './arekrender.js';
+import { rendercenter } from './centerrender.js';
  
 // Configuration
 
@@ -20,9 +21,11 @@ class GameCLASS{
     _plusarekclick = 1; // amount of coins that you get after click
     _plusareksec = 0; // amount of coins that you get after one sec 
     _cheat = false; // is cheats was used
-    _costume = 'arekliker2';
+    _costume = 'arekliker2'; // costume of arek
     _canvasBackground = false;
     _canvasBackgroundContext = false;
+
+    _stateOfBottomCenter = 'main'; // scene of bottom center
 
     // safe way to get costume
     get costume(){
@@ -40,6 +43,7 @@ class GameCLASS{
     // render everything that can be change (automatically doing every 100ms)
     render(){
         arekrender(Game);
+        rendercenter(Game);
     }
     simulateclick(){
         click(Game)
