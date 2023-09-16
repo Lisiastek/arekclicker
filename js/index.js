@@ -151,7 +151,7 @@ window.game = {
         Game.plusarekclick = amount;
     },
     enterLocaction(locaction){
-        changeLocaction(Game, Locaction);   
+        changeLocaction(Game, locaction);   
     },
     // forcefully show alert that had you got at the beginning
     showAlert(){
