@@ -1,6 +1,6 @@
 // imports
 import { renderMain } from "./bottomDIV_main.js";
-import { renderSala28 } from "./bottomDIV_main.js";
+import { renderSala28 } from "./bottomDIV_sala28.js";
 
 // render of center div
 export function rendercenter(Game){
