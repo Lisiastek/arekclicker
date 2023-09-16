@@ -37,7 +37,13 @@
     transition: transform 0.5s;
 }
 
-#centerB {
+.centerBottomLocation img {
+    height: 80%;
+    width: 80%;
+}
+
+
+#centerB, #centerG {
     position: relative;
 }
 #sala28 {
@@ -46,4 +52,53 @@
 }
 #sala28:hover img {
     transform: scale(105%);
+}
+
+#mietek {
+    bottom: 90px;
+    left: 30px;
+    transform: rotate(-35deg);
+}
+#mietek:hover img {
+    transform: scale(105%);
+    filter: contrast(30%);
+}
+.themeBottomDiv {
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#mietekScene {
+    position: absolute;
+    z-index: 1;
+    bottom: -6%;
+    right: 50%;
+}
+.bubble {
+    background: white;
+    padding: 32px;
+    border-radius: 35px;
+    position: absolute;
+    z-index: 1;
+}
+.bubble::after {
+    border: 20px solid transparent;
+    border-left-color: white;
+    content: ' ';
+    height: 35px;
+    width: 30px;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    transform: rotate(45deg);
+    border-radius: 8px;
+
+}
+#mietekBubble {
+    
+    bottom: 60%;
+    right: 30%;
 }
