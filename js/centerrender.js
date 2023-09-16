@@ -15,13 +15,13 @@ function renderbottom(Game){
 
     switch(Game._stateOfBottomCenter){
         case 'main':
-            temp = renderMain();
+            temp = renderMain(Game);
             break;
         case 'sala28':
-            temp = renderSala28();
+            temp = renderSala28(Game);
             break;
         case 'mietek':
-            temp = renderMietek();
+            temp = renderMietek(Game);
             break;
     }
 

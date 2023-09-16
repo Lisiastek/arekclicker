@@ -28,6 +28,8 @@ class GameCLASS{
 
     _stateOfBottomCenter = 'main'; // scene of bottom center
 
+    _mietekDialogue = "WItam stałego bywalca :3";
+
     // safe way to get costume
     get costume(){
         return this._costume;
@@ -152,6 +154,32 @@ window.game = {
     },
     enterLocaction(locaction){
         changeLocaction(Game, locaction);   
+    },
+    clickMietek(){
+        let audio = new Audio('./audio/uhm.mp3');
+        audio.play();
+        let num = Math.round(Math.random() * 5);
+        switch(num){
+            case 0:
+                Game._mietekDialogue = "zboczeńcu! Co ty wyprawiasz???!!!!";
+                break;
+            case 1:
+                Game._mietekDialogue = "Ouh....         ";
+                break;            
+            case 2:
+                Game._mietekDialogue = "Handlujesz czy nie????";
+                break;
+            case 3:
+                Game._mietekDialogue = "Gapisz mi sie na bebech?";
+                break;
+            case 4:
+                Game._mietekDialogue = "Wor do ciebie a ty do jeziora, czy jakoś tak";
+                break;     
+            case 5:
+                Game._mietekDialogue = "Znasz kononowicza, czy nie?";
+                break;          
+        }
+        
     },
     // forcefully show alert that had you got at the beginning
     showAlert(){

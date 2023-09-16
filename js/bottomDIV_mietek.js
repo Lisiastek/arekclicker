@@ -4,6 +4,10 @@ export function renderMietek(Game){
         tempText += text;
     }
 
+    // if(!("_mietekDialogue" in Game)){
+    //     Game._mietekDialogue = "?";
+    // }
+    
 
     addToRender(`
     
@@ -11,13 +15,26 @@ export function renderMietek(Game){
         <img draggable="false" alt="back_arrow" src="./img/backarrow.png">
     </div>
         <img class="themeBottomDiv" draggable="false" id="mietekTheme" src="./img/zulstreet.png" alt="zul street">
-        <img class="character" draggable="false" id="mietekScene" src="./img/mietek.png" alt="mietek">
+        <img class="character" draggable="false" id="mietekScene" onclick="game.clickMietek();" src="./img/mietek.png" alt="mietek">
         <div class="bubble" id="mietekBubble">
-            <p id="mietekDialogue">Witaj czego potrzebujesz?</p>
+            <p id="mietekDialogue">${Game._mietekDialogue}</p>
+        </div>
+        <div class="buyElement" id="ziola">
+            <img src="./img/ziola.png" alt="ziola">
+            <h3>Zioła</h3>3000
+            <img style="display: inline;width: 16px;" alt="arek" src="./img/arekliker2.png">
+            <br>
+            +10% ARK/S -10 HP -20 C++
         </div>
     `
         
     );
 
+
     return tempText;
 }
+// function mdiag(text){
+//     let mietekDialogue = document.getElementById("mietekDialogue");
+//     mietekDialogue.textContent = text;
+
+// }
