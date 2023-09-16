@@ -1,0 +1,29 @@
+.centerBottomLocation {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+}
+.centerBottomLocationImage {
+    width: 25px;
+    height: 25px;
+    border-radius: 3%;
+    display: block;
+}
+.centerBottomLocationText {
+    font-size: 22px;
+    font-weight: 500;
+    font-family: fantasy, sans-serif;
+    font-style: oblique;
+    font-style: italic;
+    text-align: center;
+    margin: auto;
+    margin-top: 2px;
+}
+#centerB {
+    position: relative;
+}
+#sala28 {
+    right: 80px;
+    top: 210px;
+}

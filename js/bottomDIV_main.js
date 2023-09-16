@@ -1,4 +1,4 @@
-export function renderMain(Game){
+export function renderSala28(Game){
     let tempText = ""
     function addToRender(text){
         tempText += text;

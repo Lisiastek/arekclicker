@@ -1,5 +1,6 @@
 // imports
 import { renderMain } from "./bottomDIV_main.js";
+import { renderSala28 } from "./bottomDIV_main.js";
 
 // render of center div
 export function rendercenter(Game){
@@ -14,6 +15,9 @@ function renderbottom(Game){
     switch(Game._stateOfBottomCenter){
         case 'main':
             temp = renderMain();
+            break;
+        case 'sala28':
+            temp = renderSala28();
             break;
     }
 

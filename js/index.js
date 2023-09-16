@@ -4,6 +4,7 @@ import { alertShow} from './alert.js';
 import { every100ms } from './every100ms.js';
 import { arekrender } from './arekrender.js';
 import { rendercenter } from './centerrender.js';
+import { changeLocaction } from './bottomDIV_changelocaction.js';
  
 // Configuration
 
@@ -128,6 +129,11 @@ class GameCLASS{
 
 let Game = new GameCLASS(); // declare game
 Game.render(); // first render to make game faster available
+
+// function to change locaction (not exactly that function but function that redirects onclicks to actual function)
+function changeLocactionCenter(Locaction){
+    changeLocaction(Game, Locaction);
+}
 
 // commands management (from console)
 window.game = {
