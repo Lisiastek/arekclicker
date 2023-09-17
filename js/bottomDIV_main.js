@@ -22,7 +22,7 @@ export function renderMain(Game){
         </div>
 
         <div class="centerBottomLocation openLocaction" id="kasyno" onclick="game.enterLocaction('kasyno');">
-            <img class="centerBottomLocationImage openLocactionImage" src="./img/heisenbob.png" draggable="false">
+            <img class="centerBottomLocationImage openLocactionImage" src="./img/heisenberg-spongebob.png" draggable="false">
             <h2 class="centerBottomLocationText openLocactionText">kasyno</h2>
         </div>
     `);
