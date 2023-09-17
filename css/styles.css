@@ -111,6 +111,7 @@ body > canvas {
     height: 100px;
     background: aqua;
     width: 100px;
+    flex-grow: 1;
     border: 1px black solid;
 }
 .upgrades img {
