@@ -80,6 +80,7 @@ body > canvas {
 
 #black-trans-background {
     background: rgba(37, 37, 37, 0.5);
+    color: white;
 }
 
 
