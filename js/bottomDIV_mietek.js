@@ -21,10 +21,17 @@ export function renderMietek(Game){
         </div>
         <div class="buyElement" id="ziola">
             <img src="./img/ziola.png" alt="ziola">
-            <h3>Zioła</h3>3000
+            <h3>Zioła</h3>8,000
             <img style="display: inline;width: 16px;" alt="arek" src="./img/arekliker2.png">
             <br>
             +10% ARK/S -10 HP -20 C++
+        </div>
+        <div class="buyElement" id="heisenbergMietek">
+            <img src="./img/heisenbergMietek.png" alt="heisenbergMietekImg">
+            <h3>Niebieska meta</h3>50,000
+            <img style="display: inline;width: 16px;" alt="arek" src="./img/arekliker2.png">
+            <br>
+            +25% ARK/S -5 HP -40 C++
         </div>
     `
         
