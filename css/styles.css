@@ -108,10 +108,22 @@ body > canvas {
 }
 
 .upgrades {
+    height: 100px;
+    background: aqua;
+    width: 100px;
+    border: 1px black solid;
+}
+.upgrades img {
+    max-width: 90%;
+    height: 90%;
+    width: 100px;
+    padding: 5%;
+}
+/* .upgrades {
     width: 25%;
     height: 90px;
     background-color: aqua;
-}
+} */
 
 .text28{
     display: inline;

@@ -30,6 +30,7 @@ class GameCLASS{
 
     _mietekDialogue = "WItam stałego bywalca :3";
 
+    _shinenumbering = 0;
     // safe way to get costume
     get costume(){
         return this._costume;
@@ -94,7 +95,7 @@ class GameCLASS{
             // canvas background
             this._canvasBackground = document.getElementById('backgroundCanvas');
             this._canvasBackgroundContext = this._canvasBackground.getContext("2d");
-
+            
             
             
         })
