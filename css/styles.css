@@ -35,6 +35,21 @@
     background: url("../img/brick.jpg") no-repeat;
     background-size: cover;
     background-position: center;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.centerGMenu {
+    min-width: 50px;
+    color: white;
+    font-size: 28px;
+    padding: 20px;
+    cursor: pointer;
+
+    border-left: dashed 1px black;
+    border-right: dashed 1px black;
 }
 
 #centerB {
