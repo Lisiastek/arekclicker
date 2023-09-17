@@ -63,6 +63,25 @@
     transform: scale(105%);
     filter: contrast(30%);
 }
+
+#swiezaki {
+    top: 20px;
+    left: 50px;
+    transition: filter 1s;
+}
+#swiezaki:hover {
+    filter: opacity(0.3);
+    transition: filter 1s;
+}
+#swiezaki img {
+    transition: filter 1s;
+}
+#swiezaki:hover img {
+    filter: opacity(0);
+    transition: filter 1s;
+}
+
+
 .themeBottomDiv {
     height: 100%;
     width: 100%;
@@ -121,4 +140,12 @@
 #heisenbergMietek {
     right: 1%;
     bottom: 15%;
+}
+
+
+#swiezakiScene {
+    transform:scale(2.5) rotate(12deg);
+    position: absolute;
+    bottom: 15%;
+    right: 50%;
 }
