@@ -81,6 +81,15 @@
     transition: filter 1s;
 }
 
+#kasyno {
+    right: 200px;
+    top: 210px;
+    position: absolute;
+}
+#kasyno:hover img {
+    transform: scale(105%);
+}
+
 
 .themeBottomDiv {
     height: 100%;

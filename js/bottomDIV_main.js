@@ -20,6 +20,11 @@ export function renderMain(Game){
             <img class="centerBottomLocationImage openLocactionImage" src="./img/swiezaki.png" draggable="false">
             <h2 class="centerBottomLocationText openLocactionText">Gang świeżaków</h2>
         </div>
+
+        <div class="centerBottomLocation openLocaction" id="kasyno" onclick="game.enterLocaction('kasyno');">
+            <img class="centerBottomLocationImage openLocactionImage" src="./img/heisenbob.png" draggable="false">
+            <h2 class="centerBottomLocationText openLocactionText">kasyno</h2>
+        </div>
     `);
 
     return tempText;
