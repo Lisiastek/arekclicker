@@ -31,6 +31,17 @@ class GameCLASS{
 
     _mietekDialogue = "WItam stałego bywalca :3";
 
+
+    upgradesClick = {
+        "ciplasplasbook":{
+            adder:1,
+            multiplier: 0,
+            
+            cost:100,
+            obtained:false
+        }
+    };
+
     _shinenumbering = 0;
     // safe way to get costume
     get costume(){
@@ -183,6 +194,9 @@ window.game = {
         }
         
     },
+    // buy(itemName){
+    //     if(game.upgradesClick.has)
+    // },
     // forcefully show alert that had you got at the beginning
     showAlert(){
         document.getElementById('blank').style.display = "flex";
