@@ -13,7 +13,7 @@ export function renderStatistics(Game){
     <img class="themeBottomDiv" draggable="false" id="statisticsTheme" src="./img/night.png" alt="statistics theme background">
     
     <h1 style="color:white;">Statytyki</h1>
-
+    <p style="color:white;">
     Ilość arekCoinów: ${Game._arek}
     <br>
     Łączna ilość uzyskanych arekCoinów: ${Game._arekgained}
@@ -31,7 +31,7 @@ export function renderStatistics(Game){
     Aktualne arki na sekundę: ${Game._plusareksec}
     <br>
     Czy masz raka płuc: Tak
-
+    </p>
     `
         
     );
