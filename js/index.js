@@ -19,6 +19,7 @@ class GameCLASS{
     _arek = 0; // amount of coins
     _arekgained = 0; // total amount of coins gained
     _areklost = 0; // total amount of coins lost
+    _arekpaid = 0; // total amount of coins used to purchase something
     _plusarekclick = 1; // amount of coins that you get after click
     _plusareksec = 0; // amount of coins that you get after one sec 
     _cheat = false; // is cheats was used
