@@ -15,21 +15,21 @@ export function renderStatistics(Game){
     <h1 style="color:white;">Statytyki</h1>
 
     Ilość arekCoinów: ${Game._arek}
-    <br/>
+    <br>
     Łączna ilość uzyskanych arekCoinów: ${Game._arekgained}
-    <br/>
+    <br>
     Łączna ilość straconych arekCoinów: ${Game._areklost}
-    <br/>
+    <br>
     Łączna ilość wydanych arekCoinów: ${Game._arekpaid}
-    <br/>
+    <br>
     Czy na tym koncie użyto cheatów: ${Game._cheat ? "Tak" : "nie"}
-    <br/>
+    <br>
     Aktualny kostium arka: ${Game._costume}
-    <br/>
+    <br>
     Aktualne arki na jedno kliknięcie: ${Game._plusarekclick}
-    <br/>
+    <br>
     Aktualne arki na sekundę: ${Game._plusareksec}
-    <br/>
+    <br>
     Czy masz raka płuc: Tak
 
     `
