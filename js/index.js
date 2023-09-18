@@ -38,16 +38,19 @@ class GameCLASS{
 
 
     getUpgradesTable(){
+
         let temp = Object.entries(this._upgrades);
+        let newTable = [];
         for(const [key, value] of temp){
-            this._upgradesTable.push([key, value]);
+            newTable.push([key, value]);
         }      
 
-        this._upgradesTable = this._upgradesTable.sort((x,y) => {
+        newTable = newTable.sort((x,y) => {
             if(x[1].importance < x[1].importance) return -1;
             if(x[1].importance > x[1].importance) return 1;
             return 0;
         });
+        this._upgradesTable = newTable;
     }
 
     isObtained(id){
@@ -59,7 +62,7 @@ class GameCLASS{
     howMuchCost(id){
         let cost = this._upgrades[id].basicCost * 1
         for(let i=2; i<=this._upgrades[id].obtained; i++) cost += cost * this._upgrades[id].costMultiplier
-        return round(cost, 2)
+        return Math.round(cost, 2)
     }
     isAvaliable(id){
 
@@ -68,9 +71,12 @@ class GameCLASS{
         // this._upgrades[id].needToHaveBefore.forEach(() => {
 
         // })
-        for(const [key, value] of Object.entries(this._upgrades[id].needToHaveBefore)){
-            if(this.numObtained(key) < value) return false
+        if(this._upgrades[id].useNeedToHaveBefore){
+            for(const [key, value] of Object.entries(this._upgrades[id].needToHaveBefore)){
+                if(this.numObtained(key) < value) return false
+            }
         }
+
 
         if(this._upgrades[id].useLocalizationsAvailable){
             if(!(this._upgrades[id].LocalizationsAvailable.includes(this._stateOfBottomCenter))) return false;
@@ -92,12 +98,13 @@ class GameCLASS{
 
         // max amount to buy
         if(this._upgrades[id].obtained >= this._upgrades[id].maxAmountToBuy) return false;
+        return true;
     }
 
     buy(id){
         if(!(this.isBuyable(id))) return false;
-        this._arek -= this.cost(id);
-        this._arekpaid += this.cost(id);
+        this._arek -= this.howMuchCost(id);
+        this._arekpaid += this.howMuchCost(id);
         this._upgrades[id].obtained += 1;
 
         this.getUpgradesTable();
@@ -305,6 +312,6 @@ window.game = {
 
 };
 
-Game._upgrades.ciplasplasbook.obtained = 10;
-Game.countPerClick();
-console.log(Game._plusarekclick);
+// Game._upgrades.ciplasplasbook.obtained = 10;
+// Game.countPerClick();
+// console.log(Game._plusarekclick);

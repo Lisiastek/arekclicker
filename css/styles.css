@@ -100,47 +100,6 @@ body > canvas {
     color: white;
 }
 
-#commercial {
-    width: 100%;
-    height: 20px;
-    background-color: blue;
-    color: violet;
-    border-bottom: 2px solid black;
-}
-
-#shopCategory {
-    width: 100%;
-    height: 74.4px;
-    background-color: rgb(155, 89, 89);
-    font-size: 30px;
-}
-
-#upgradeParent {
-    border-top: 2px solid black;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-}
-
-.upgrades {
-    height: 100px;
-    background: aqua;
-    width: 100px;
-    flex-grow: 1;
-    border: 1px black solid;
-}
-.upgrades img {
-    max-width: 90%;
-    height: 90%;
-    width: 100px;
-    padding: 5%;
-}
-/* .upgrades {
-    width: 25%;
-    height: 90px;
-    background-color: aqua;
-} */
-
 .text28{
     display: inline;
     color: red;

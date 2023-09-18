@@ -1,0 +1,60 @@
+#commercial {
+    width: 100%;
+    height: 20px;
+    background-color: blue;
+    color: violet;
+    border-bottom: 2px solid black;
+}
+
+#shopCategory {
+    width: 100%;
+    height: 74.4px;
+    background-color: rgb(155, 89, 89);
+    font-size: 30px;
+}
+
+#upgradeParent {
+    border-top: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.upgrades {
+    height: 100px;
+    background: aqua;
+    width: 100px;
+    flex-grow: 1;
+    border: 1px black solid;
+
+    position: relative;
+}
+.upgrades > img {
+    max-width: 90%;
+    height: 90%;
+    width: 100px;
+    padding: 5%;
+}
+.upgradesAmount {
+    font-size: 12px;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+}
+.upgradesAmount > img {
+    width: 12px;
+    display: inline;
+}
+
+.obtainedAmount {
+    font-size: 12px;
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* .upgrades {
+    width: 25%;
+    height: 90px;
+    background-color: aqua;
+} */
