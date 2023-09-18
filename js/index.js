@@ -81,7 +81,7 @@ class GameCLASS{
         if(this._upgrades[id].useLocalizationsAvailable){
             if(!(this._upgrades[id].LocalizationsAvailable.includes(this._stateOfBottomCenter))) return false;
         }
-
+        return true;
 
 
 

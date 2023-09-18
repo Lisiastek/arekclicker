@@ -56,6 +56,9 @@
     left: 50%;
     transform: translateX(-50%);
 }
+.nonbuyable {
+    filter:grayscale(200%);
+}
 /* .upgrades {
     width: 25%;
     height: 90px;
