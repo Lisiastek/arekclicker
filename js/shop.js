@@ -5,12 +5,12 @@ export function shopGen(Game){
     Game._upgradesTable.forEach(element => {
         if(element[1].showInRightMenu){
             text += `<div class="upgrades" onclick="game.buy('${element[0]}');">
-            <img src="${element[1].rightMenuImg}">
-            <p class="upgradesAmount">
+            <img src="${element[1].rightMenuImg}" draggable="false">
+            <p class="upgradesAmount" draggable="false">
                 ${Game.howMuchCost(element[0])}
-                <img src="./img/arekliker2.png" alt="arek coin">
+                <img src="./img/arekliker2.png" alt="arek coin" draggable="false">
             </p>
-            <p class="obtainedAmount">
+            <p class="obtainedAmount" draggable="false">
                 ${element[1].obtained}
             </p>
             </div>`;

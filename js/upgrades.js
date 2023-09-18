@@ -43,7 +43,7 @@ export var upgrades = {
         addtoClickMultiplierGlobal: 0, // 0 means nothing
 
         showInRightMenu: true,
-        rightMenuImg: "",
+        rightMenuImg: "./img/ciplasplasbook.png",
 
         obtained: 0 // amount of this item that you already have
     },

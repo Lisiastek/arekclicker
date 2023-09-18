@@ -28,12 +28,13 @@
     border: 1px black solid;
 
     position: relative;
+    cursor: pointer;
 }
 .upgrades > img {
     max-width: 90%;
-    height: 90%;
+    max-height: 90%;
     width: 100px;
-    padding: 5%;
+    padding: 1% 5% 1% 5%;
 }
 .upgradesAmount {
     font-size: 12px;
@@ -47,7 +48,9 @@
 }
 
 .obtainedAmount {
-    font-size: 12px;
+    font-size: 24px;
+    color: pink;
+    font-family: fantasy, sans-seris;
     position: absolute;
     top: 2px;
     left: 50%;
