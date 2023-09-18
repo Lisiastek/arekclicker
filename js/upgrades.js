@@ -28,8 +28,8 @@ export var upgrades = {
     "ciplasplasbook":{
         importance: 1,
 
-        basicCost: 20, // basic cost
-        costMultiplier: 0.2, // % adding after every purchase
+        basicCost: 25, // basic cost
+        costMultiplier: 0.35, // % adding after every purchase
         useNeedToHaveBefore: false,
         needToHaveBefore: {
             // ciplasplasbook: 1
