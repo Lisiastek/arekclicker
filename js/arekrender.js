@@ -26,6 +26,6 @@ function renderinfounder(Game){
     // render information about amount of coins obtained after one click and after one sec
     let arekPS = document.getElementById('perS');
     arekPS.innerHTML = "na kliknięcie: "+ Math.round(Game.plusarekclick * 100)/100+
-    "<br>"+"na sekundę: "+ Math.round(Game.plusareksec * 100)/100+"<br/>"+Game.plusareksec;
+    "<br>"+"na sekundę: "+ Math.round(Game.plusareksec * 100)/100+"<br/>";
 
 }
