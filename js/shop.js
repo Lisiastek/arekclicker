@@ -1,10 +1,15 @@
 export function shopGen(Game){
     let where = document.getElementById("upgradeParent");
     let text = "";
+    let classType = "";
     console.log(Game._upgrades);
     Game._upgradesTable.forEach(element => {
-        if(element[1].showInRightMenu){
-            text += `<div class="upgrades" onclick="game.buy('${element[0]}');">
+        if(element[1].showInRightMenu&&Game.isAvaliable(element[0])){
+
+            if(Game.isBuyable(element[0])) classType = "buyable";
+            else classType = "nonbuyable";
+
+            text += `<div class="upgrades ${classType}" onclick="game.buy('${element[0]}');">
             <img src="${element[1].rightMenuImg}" draggable="false">
             <p class="upgradesAmount" draggable="false">
                 ${Game.howMuchCost(element[0])}
