@@ -25,6 +25,6 @@ function renderinfounder(Game){
     // arekC.innerHTML = Game.arek + " arków";
     // render information about amount of coins obtained after one click and after one sec
     let arekPS = document.getElementById('perS');
-    arekPS.innerHTML = "na sekunde: "+ Game.plusarekclick;
+    arekPS.innerHTML = "na kliknięcie: "+ Game.plusarekclick;
 
 }
