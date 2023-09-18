@@ -33,7 +33,7 @@ export var upgrades = {
         importance: 1,
 
         basicCost: 25, // basic cost
-        costMultiplier: 1, // % adding after every purchase
+        costMultiplier: 0.5, // % adding after every purchase
         useNeedToHaveBefore: false,
         needToHaveBefore: {
             // ciplasplasbook: 1
