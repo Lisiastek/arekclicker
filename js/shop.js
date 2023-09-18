@@ -2,7 +2,6 @@ export function shopGen(Game){
     let where = document.getElementById("upgradeParent");
     let text = "";
     let classType = "";
-    console.log(Game._upgrades);
     Game._upgradesTable.forEach(element => {
         if(element[1].showInRightMenu&&Game.isAvaliable(element[0])){
 

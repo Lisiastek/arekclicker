@@ -16,7 +16,7 @@ function renderinfounder(Game){
     // render number of coins
     let arekC = document.getElementById('arekC');
     // arek render
-    let _temp = Game.arek + " arków";
+    let _temp = Math.round(Game.arek * 100)/100 + " arków";
     if((_temp.includes("28"))||(_temp.includes("56"))){
         _temp = _temp.replaceAll("28", `<p class="text28">28</p>`);
         _temp = _temp.replaceAll("56", `<p class="text56">56</p>`);
@@ -25,6 +25,7 @@ function renderinfounder(Game){
     // arekC.innerHTML = Game.arek + " arków";
     // render information about amount of coins obtained after one click and after one sec
     let arekPS = document.getElementById('perS');
-    arekPS.innerHTML = "na kliknięcie: "+ Game.plusarekclick;
+    arekPS.innerHTML = "na kliknięcie: "+ Math.round(Game.plusarekclick * 100)/100+
+    "<br>"+"na sekundę: "+ Math.round(Game.plusareksec * 100)/100+"<br/>"+Game.plusareksec;
 
 }

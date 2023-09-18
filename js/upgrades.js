@@ -18,6 +18,10 @@ export var upgrades = {
     //     addtoClickMultiplierLocal: 0, // Local multiplier (interact only with itself)
     //     addtoClickMultiplierGlobal: 0, // Global multiplier (interact with all items)
 
+    //     addtoSecNum: 1, // how much you will get after one purchase
+    //     addtoSecMultiplierLocal: 0, // Local multiplier (interact only with itself)
+    //     addtoSecMultiplierGlobal: 0, // Global multiplier (interact with all items)
+
     //     showInRightMenu: true, // that means is it will be showed in the right panel named "shop"
     //     rightMenuImg: "", // image for this
 
@@ -41,6 +45,10 @@ export var upgrades = {
         addtoClickNum: 0.2,
         addtoClickMultiplierLocal: 0,
         addtoClickMultiplierGlobal: 0, // 0 means nothing
+
+        addtoSecNum: 0,
+        addtoSecMultiplierLocal: 0,
+        addtoSecMultiplierGlobal: 0, // 0 means nothing
 
         showInRightMenu: true,
         rightMenuImg: "./img/ciplasplasbook.png",

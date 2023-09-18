@@ -61,7 +61,7 @@ class GameCLASS{
     }
     howMuchCost(id){
         let cost = this._upgrades[id].basicCost * 1
-        for(let i=2; i<=this._upgrades[id].obtained; i++) cost += cost * this._upgrades[id].costMultiplier
+        for(let i=1; i<=this._upgrades[id].obtained; i++) cost += cost * this._upgrades[id].costMultiplier
         return Math.round(cost, 2)
     }
     isAvaliable(id){
@@ -109,6 +109,7 @@ class GameCLASS{
 
         this.getUpgradesTable();
         this.countPerClick();
+        this.countPerSec();
         return true;
     }
 
@@ -127,20 +128,23 @@ class GameCLASS{
 
         this._plusarekclick = sum;
         
+    }
+
+    countPerSec(){
+        let sum = 0;
+
+        this._upgradesTable.forEach((element) => {
+            for(let i=1; i <= element[1].obtained; i++)
+            sum += element[1].addtoSecNum + element[1].addtoSecNum * element[1].addtoSecMultiplierLocal * (element[1].obtained-1);
+        });
         
+        this._upgradesTable.forEach((element) => {
+            for(let i=1; i <= element[1].obtained; i++)
+            sum = sum + sum * element[1].addtoSecMultiplierGlobal;
+        });
 
-        // let temp = Object.entries(this._upgrades);
-        // let temp = [];
-        // for(const [key, value] of temp){
-        //     temp.push([key, value]);
-        // }      
-
-        // for(const [key, value] of temp){
-        //     sum += value.addtoClickNum;
-        // }
-        // temp = temp.sort((x, y) => {
-            
-        // })
+        this._plusareksec = sum;
+        
     }
 
     _shinenumbering = 0;
@@ -198,7 +202,6 @@ class GameCLASS{
 
     constructor(){
         this.getUpgradesTable();
-        console.log(this._upgradesTable);
         
         window.addEventListener("DOMContentLoaded", function(){
             // adding on clicks
