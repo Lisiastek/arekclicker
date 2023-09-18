@@ -5,6 +5,8 @@ import { every100ms } from './every100ms.js';
 import { arekrender } from './arekrender.js';
 import { rendercenter } from './centerrender.js';
 import { changeLocaction } from './bottomDIV_changelocaction.js';
+import { upgrades } from './upgrades.js';
+import { shopGen } from './shop.js';
  
 // Configuration
 
@@ -31,16 +33,108 @@ class GameCLASS{
 
     _mietekDialogue = "WItam stałego bywalca :3";
 
+    _upgrades = upgrades;
+    _upgradesTable = [];
 
-    upgradesClick = {
-        "ciplasplasbook":{
-            adder:1,
-            multiplier: 0,
-            
-            cost:100,
-            obtained:false
+
+    getUpgradesTable(){
+        let temp = Object.entries(this._upgrades);
+        for(const [key, value] of temp){
+            this._upgradesTable.push([key, value]);
+        }      
+
+        this._upgradesTable = this._upgradesTable.sort((x,y) => {
+            if(x[1].importance < x[1].importance) return -1;
+            if(x[1].importance > x[1].importance) return 1;
+            return 0;
+        });
+    }
+
+    isObtained(id){
+        return this._upgrades[id].obtained != 0
+    }
+    numObtained(id){
+        return this._upgrades[id].obtained
+    }
+    howMuchCost(id){
+        let cost = this._upgrades[id].basicCost * 1
+        for(let i=2; i<=this._upgrades[id].obtained; i++) cost += cost * this._upgrades[id].costMultiplier
+        return round(cost, 2)
+    }
+    isAvaliable(id){
+
+
+        // check if player's has all required buldings before
+        // this._upgrades[id].needToHaveBefore.forEach(() => {
+
+        // })
+        for(const [key, value] of Object.entries(this._upgrades[id].needToHaveBefore)){
+            if(this.numObtained(key) < value) return false
         }
-    };
+
+        if(this._upgrades[id].useLocalizationsAvailable){
+            if(!(this._upgrades[id].LocalizationsAvailable.includes(this._stateOfBottomCenter))) return false;
+        }
+
+
+
+
+
+
+
+    }
+    
+    isBuyable(id){
+        if(this.isAvaliable(id)==false) return false;
+
+        // check if player's wallet is enough to this purchase, if not return false
+        if(!(this._arek >= this.howMuchCost(id))) return false;
+
+        // max amount to buy
+        if(this._upgrades[id].obtained >= this._upgrades[id].maxAmountToBuy) return false;
+    }
+
+    buy(id){
+        if(!(this.isBuyable(id))) return false;
+        this._arek -= this.cost(id);
+        this._arekpaid += this.cost(id);
+        this._upgrades[id].obtained += 1;
+
+        this.getUpgradesTable();
+        this.countPerClick();
+        return true;
+    }
+
+    countPerClick(){
+        let sum = 1;
+
+        this._upgradesTable.forEach((element) => {
+            for(let i=1; i <= element[1].obtained; i++)
+            sum += element[1].addtoClickNum + element[1].addtoClickNum * element[1].addtoClickMultiplierLocal * (element[1].obtained-1);
+        });
+        
+        this._upgradesTable.forEach((element) => {
+            for(let i=1; i <= element[1].obtained; i++)
+            sum = sum + sum * element[1].addtoClickMultiplierGlobal;
+        });
+
+        this._plusarekclick = sum;
+        
+        
+
+        // let temp = Object.entries(this._upgrades);
+        // let temp = [];
+        // for(const [key, value] of temp){
+        //     temp.push([key, value]);
+        // }      
+
+        // for(const [key, value] of temp){
+        //     sum += value.addtoClickNum;
+        // }
+        // temp = temp.sort((x, y) => {
+            
+        // })
+    }
 
     _shinenumbering = 0;
     // safe way to get costume
@@ -60,6 +154,7 @@ class GameCLASS{
     render(){
         arekrender(Game);
         rendercenter(Game);
+        shopGen(Game);
     }
     simulateclick(){
         click(Game)
@@ -93,7 +188,10 @@ class GameCLASS{
     }   
 
 
+
     constructor(){
+        this.getUpgradesTable();
+        console.log(this._upgradesTable);
         
         window.addEventListener("DOMContentLoaded", function(){
             // adding on clicks
@@ -194,6 +292,9 @@ window.game = {
         }
         
     },
+    buy(itemName){
+        Game.buy(itemName);
+    },
     // buy(itemName){
     //     if(game.upgradesClick.has)
     // },
@@ -203,3 +304,7 @@ window.game = {
     }
 
 };
+
+Game._upgrades.ciplasplasbook.obtained = 10;
+Game.countPerClick();
+console.log(Game._plusarekclick);
