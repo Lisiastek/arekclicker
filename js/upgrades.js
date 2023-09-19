@@ -22,6 +22,9 @@ export var upgrades = {
     //     addtoSecMultiplierLocal: 0, // Local multiplier (interact only with itself)
     //     addtoSecMultiplierGlobal: 0, // Global multiplier (interact with all items)
 
+    //     multiplierAnotherItems: { "itemID": percentPerItem}, IT DOESNT WORK
+    
+
     //     showInRightMenu: true, // that means is it will be showed in the right panel named "shop"
     //     rightMenuImg: "", // image for this
 
@@ -49,6 +52,8 @@ export var upgrades = {
         addtoSecNum: 0,
         addtoSecMultiplierLocal: 0,
         addtoSecMultiplierGlobal: 0, // 0 means nothing
+
+        multiplierAnotherItems: {},
 
         showInRightMenu: true,
         rightMenuImg: "./img/ciplasplasbook.png",
