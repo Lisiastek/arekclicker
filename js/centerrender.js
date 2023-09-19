@@ -53,9 +53,11 @@ function renderbottom(Game){
             break;     
     }
 
+    let temp5 = document.getElementById("temp");
+    temp5.innerHTML = temp;
 
-    if(temp != btmDiv.innerHTML){
-        btmDiv.innerHTML = temp;
+    if(temp5.innerHTML != btmDiv.innerHTML){
+        btmDiv.innerHTML = temp5.innerHTML;
     }
 
 
