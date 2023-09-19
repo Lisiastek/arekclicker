@@ -4,11 +4,11 @@ export function kasynoAction(Game){
         let randomValue = Math.floor(Math.random() * 100);
     
         if(myCookiesToLose > Game._arek) {
-            Game.help.maloCiastek = "Masz za mało ciastek!";
+            Game.help.maloCiastek = "Masz za mało arków!";
         }
     
         else if(myCookiesToLose<0) {
-            Game.help.maloCiastek = "Liczba musi być dodatnia!";
+            Game.help.maloCiastek = "Liczba arków musi być dodatnia!";
         }
         else if(isNaN(myCookiesToLose)) {
             Game.help.maloCiastek = "Nie wolno tak";
@@ -19,7 +19,7 @@ export function kasynoAction(Game){
                 let myMultiplier = Math.floor(Math.random() * 10)+2;
                 myCookiesToLose*=myMultiplier;
                 Game._arek+=myCookiesToLose;
-                Game.help.maloCiastek = "Wygrałeś " + myCookiesToLose + " ciastek!"
+                Game.help.maloCiastek = "Wygrałeś " + myCookiesToLose + " arków!"
                 Game.help.mnoznik = "Mnożnik: X" + myMultiplier
             }
             else {

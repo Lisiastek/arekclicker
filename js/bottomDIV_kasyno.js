@@ -11,7 +11,7 @@ export function renderKasyno(Game){
     </div>
         <h1>Kasyno</h1>
     <div>
-        <span id="myCookieCounter">${"Ciastka: "+Math.round(Game._arek * 100)/100}</span><br>
+        <span id="myCookieCounter">${"Arki: "+Math.round(Game._arek * 100)/100}</span><br>
 
         <input type="text" id="cookies">
         <button type="submit" id="myButton">Losuj</button><br><br>
