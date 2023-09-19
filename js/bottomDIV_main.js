@@ -15,17 +15,16 @@ export function renderMain(Game){
 
         <div class="centerBottomLocation openLocaction" id="mietek" onclick="game.enterLocaction('mietek');">
             <img class="centerBottomLocationImage openLocactionImage" src="./img/mietek.png" draggable="false">
-            <h2 class="centerBottomLocationText openLocactionText">Żul Mietek</h2>
+            <h2 class="centerBottomLocationText openLocactionText" id="mietekText">Żul Mietek</h2>
         </div>
 
         <div class="centerBottomLocation openLocaction" id="swiezaki" onclick="game.enterLocaction('swiezaki');">
             <img class="centerBottomLocationImage openLocactionImage" src="./img/swiezaki.png" draggable="false">
-            <h2 class="centerBottomLocationText openLocactionText">Gang świeżaków</h2>
+            <h2 class="centerBottomLocationText openLocactionText" id="swiezakiText">Gang świeżaków</h2>
         </div>
 
         <div class="centerBottomLocation openLocaction" id="kasyno" onclick="game.enterLocaction('kasyno');">
-            <img class="centerBottomLocationImage openLocactionImage" src="./img/heisenberg-spongebob.png" draggable="false">
-            <h2 class="centerBottomLocationText openLocactionText">kasyno</h2>
+            <img class="centerBottomLocationImage openLocactionImage" src="./img/arekvegas.png" draggable="false">
         </div>
     `);
 

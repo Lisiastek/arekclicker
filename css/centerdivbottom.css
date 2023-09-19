@@ -55,19 +55,27 @@
 }
 
 #mietek {
-    bottom: 90px;
-    left: 30px;
-    transform: rotate(-35deg);
+    bottom: 30%;
+    left: 0.5%;
+    transform: scale(0.6);
 }
 #mietek:hover img {
     transform: scale(105%);
     filter: contrast(30%);
 }
+#mietekText {
+    color: white;
+}
 
 #swiezaki {
-    top: 20px;
-    left: 50px;
+    top: 16%;
+    left: 8px;
+    transform: rotate(-9deg);
     transition: filter 1s;
+    color: white;
+}
+#swiezakiText {
+    font-size: 9px;
 }
 #swiezaki:hover {
     filter: opacity(0.3);
@@ -82,9 +90,10 @@
 }
 
 #kasyno {
-    right: 200px;
-    top: 210px;
+    right: 7%;
+    top: 4.5%;
     position: absolute;
+    transform: scale(1.8);
 }
 #kasyno:hover img {
     transform: scale(105%);
