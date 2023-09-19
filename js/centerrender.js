@@ -8,6 +8,7 @@ import { renderStatistics } from "./bottomDIV_statistics.js";
 import { renderStokrotka } from "./bottomDIV_stokrotka.js";
 import { renderDocs } from "./bottomDIV_docs.js";
 import { renderInformation } from "./bottomDIV_information.js";
+import { renderDocs_gvar } from "./bottomDIV_docs_globvar.js";
 
 // render of center div
 export function rendercenter(Game){
@@ -46,7 +47,10 @@ function renderbottom(Game){
             break;
         case 'docs':
             temp = renderDocs(Game);
-            break;        
+            break;   
+        case 'docs_globvar':
+            temp = renderDocs_gvar(Game);
+            break;     
     }
 
 
