@@ -27,7 +27,6 @@ export function kasynoAction(Game){
                 Game.help.maloCiastek = "Przegrałeś!";
                 Game.help.mnoznik = ""; 
             }
-        }
-        
+        }  
     }
 }
