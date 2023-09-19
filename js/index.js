@@ -36,7 +36,7 @@ class GameCLASS{
     _upgrades = upgrades;
     _upgradesTable = [];
 
-    help = {};
+    help = {"maloCiastek":0, "mnoznik":0};
 
 
     getUpgradesTable(){
