@@ -12,8 +12,21 @@ export function renderDocs(Game){
     </div>
     <img class="themeBottomDiv" draggable="false" id="statisticsTheme" src="./img/night.png" alt="statistics theme background">
     
-    <h1 style="color:white;">Informacje</h1>
-    <button onclick="game.enterLocaction('docs');">Dokumentacja</button>
+    <h1 style="color:white;">Dokumentacja</h1>
+    <div id="buttonsdocs">
+        <button onclick="game.enterLocaction('docs_globvar');">Globalne wartości</button>
+        <button onclick="game.enterLocaction('docs_scenesfront');">Sceny - Wygląd</button>
+        <button onclick="game.enterLocaction('docs_scenesback');">Sceny - Funkcjonalność</button>
+        <button onclick="game.enterLocaction('docs_gameobj');">Obiekt Game</button>
+        <button onclick="game.enterLocaction('docs_items');">Itemy</button>
+        <button onclick="game.enterLocaction('docs_console');">Konsola</button>
+        <button onclick="game.enterLocaction('docs_render');">Rendering</button>
+        <button onclick="game.enterLocaction('docs_timeevents');">Eventy czasowe</button>
+        
+        
+        <button onclick="game.enterLocaction('docs_others');">inne</button>
+    </div>
+
     `
         
     );
