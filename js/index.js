@@ -7,6 +7,7 @@ import { rendercenter } from './centerrender.js';
 import { changeLocaction } from './bottomDIV_changelocaction.js';
 import { upgrades } from './upgrades.js';
 import { shopGen } from './shop.js';
+import { renderStats } from './renderstats.js';
  
 // Configuration
 
@@ -168,6 +169,7 @@ class GameCLASS{
         arekrender(Game);
         rendercenter(Game);
         shopGen(Game);
+        renderStats();
     }
     simulateclick(){
         click(Game)

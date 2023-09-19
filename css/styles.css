@@ -19,6 +19,8 @@
     background: url("../img/fajnamcgrafika.png") no-repeat;
     background-size: cover;
     background-position: center;
+
+    position: relative;
 }
 
 #center {
@@ -125,4 +127,10 @@ body > canvas {
         color: rgb(102, 55, 55);
         font-size: 1.1em;
     }
+}
+#stats {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
 }
