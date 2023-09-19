@@ -6,6 +6,8 @@ import { renderSwiezaki } from "./bottomDIV_swiezaki.js";
 import { renderKasyno } from "./bottomDIV_kasyno.js";
 import { renderStatistics } from "./bottomDIV_statistics.js";
 import { renderStokrotka } from "./bottomDIV_stokrotka.js";
+import { renderDocs } from "./bottomDIV_docs.js";
+import { renderInformation } from "./bottomDIV_information.js";
 
 // render of center div
 export function rendercenter(Game){
@@ -39,6 +41,12 @@ function renderbottom(Game){
         case 'stokrotka':
             temp = renderStokrotka(Game);
             break;
+        case 'information':
+            temp = renderInformation(Game);
+            break;
+        case 'docs':
+            temp = renderDocs(Game);
+            break;        
     }
 
 
