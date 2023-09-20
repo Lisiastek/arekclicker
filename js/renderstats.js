@@ -6,41 +6,40 @@ export function renderStats(Game){
         <label for="hp">
             <img src="./img/hp.png" width="25">
         </label>
-        <progress id="hp" max="100" value="50">
+        <progress id="hp" style="accent-color: red;" max="${Game.stats.health_max}" value="${Game.stats.health}"></progress>
         </div>
         <div>
         <label for="cpp">
             <img src="./img/ciplasplasicon.png" width="25">
         </label>
-        <progress id="cpp" max="100" value="100">
+        <progress id="cpp" style="accent-color: blue;" max="${Game.stats.cpp_max}" value="${Game.stats.cpp}"></progress>
         </div>       
         <div>
         <label for="heisenberg">
             <img src="./img/heisenberg.png" width="25">
         </label>
-        <progress id="heisenberg" max="100" value="100">
+        <progress id="${Game.stats.power_max}" style="accent-color: black;" max="100" value="${Game.stats.power}"></progress>
         </div>  
         <div>
         <label for="energy">
             <img src="./img/energy.png" width="25">
         </label>
-        <progress id="energy" max="100" value="100">
+        <progress id="energy" style="accent-color: orange;" max="${Game.stats.energy_max}" value="${Game.stats.energy}"></progress>
         </div>  
         <div>
         <label for="food">
             <img src="./img/food.png" width="25">
         </label>
-        <progress id="food" max="100" value="100">
+        <progress id="food" style="accent-color: green;" max="${Game.stats.food_max}" value="${Game.stats.food}"></progress>
         </div>  
         <div>
         <label for="xp" style="color:white;">
-            5 LV (200/300)
+            ${Game.stats.level} LV (${Game.stats.xp}/${Game.stats.xp_max})
         </label>
-        <progress id="xp" max="100" value="100">
+        <progress id="xp" style="accent-color: cyan;" max="${Game.stats.xp_max}" value="${Game.stats.xp}"></progress>
         </div> 
     `;
 
     
-    
-    div.innerHTML = temp;
+    if(div.innerHTML != temp) div.innerHTML = temp;
 }

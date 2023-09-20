@@ -37,6 +37,24 @@ class GameCLASS{
     _upgrades = upgrades;
     _upgradesTable = [];
 
+    stats = {
+        health: 100,
+        health_max: 100,
+        cpp: 50,
+        cpp_max: 100,
+        power: 0,
+        power_max: 0,
+        energy: 100,
+        energy_max: 100,
+        food: 45,
+        food_max: 100,
+        level: 1,
+        level_max: 999,
+        xp: 0,
+        xp_max: 0,
+    };
+
+ 
     help = {"maloCiastek":0, "mnoznik":0};
 
 
@@ -169,7 +187,7 @@ class GameCLASS{
         arekrender(Game);
         rendercenter(Game);
         shopGen(Game);
-        renderStats();
+        renderStats(Game);
     }
     simulateclick(){
         click(Game)
