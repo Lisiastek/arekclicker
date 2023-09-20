@@ -13,6 +13,8 @@ export var upgrades = {
     //     useLocalizationsAvailable: false, // is var below should be used
     //     localizationsAvailable: [], //list of localization where you can buy
     //     maxAmountToBuy: 99999, // max amount to buy
+    //     levelMin: 1, // minimum level to buy item (leave -1 to disable function)
+    //     levelMax: 1, // maximum level to buy item (leave -1 to disable function)
         
     //     addtoClickNum: 1, // how much you will get after one purchase
     //     addtoClickMultiplierLocal: 0, // Local multiplier (interact only with itself)
@@ -45,6 +47,9 @@ export var upgrades = {
         useLocalizationsAvailable: false,
         localizationsAvailable: [], //list of localization where you can buy
         maxAmountToBuy: 99999,
+        levelMin: 1,
+        levelMax: -1,
+        
         
         addtoClickNum: 0.2,
         addtoClickMultiplierLocal: 0,

@@ -104,11 +104,14 @@ class GameCLASS{
             if(!(this._upgrades[id].LocalizationsAvailable.includes(this._stateOfBottomCenter))) return false;
         }
         if(this._upgrades[id].obtained >= this._upgrades[id].maxAmountToBuy) return false;
+
+
+        // level checking
+        if(this._upgrades[id].levelMin != -1 && this._upgrades[id].levelMin <= this.stats.level) return false;
+        if(this._upgrades[id].levelMax != -1 && this._upgrades[id].levelMax >= this.stats.level) return false;
+
+
         return true;
-
-
-
-
 
 
     }
