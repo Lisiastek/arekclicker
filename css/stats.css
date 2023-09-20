@@ -1,0 +1,43 @@
+#stats {
+    padding-top: 2px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+#stats img {
+    border-radius: 32%;
+}
+#stats div {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    position: relative;
+}
+#stats progress {
+    width: 150px;
+    height: 20px;
+}
+
+#tempstats {display: none;}
+
+
+#stats div .showStatsDiv {
+    display:none;
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform:translateX(-50%);
+    padding: 8px;
+    color: white;
+    border-radius: 15px;
+    background-color: #233142;
+    border: 1px white solid;
+    font-size: 8px;
+}
+#stats div:hover .showStatsDiv {
+    display:block;
+}

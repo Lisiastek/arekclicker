@@ -56,7 +56,11 @@ class GameCLASS{
     };
 
  
-    help = {"maloCiastek":0, "mnoznik":0};
+    help = {
+        "maloCiastek":0, 
+        "mnoznik":0,
+        "statslicznik":0
+    };
 
 
     getUpgradesTable(){
