@@ -52,7 +52,7 @@ class GameCLASS{
         level: 1,
         level_max: 999,
         xp: 0,
-        xp_max: 0,
+        xp_max: 1000,
     };
 
  
@@ -318,6 +318,10 @@ window.game = {
             Game._cheat = true;
             Game.earn(amount);
         },
+    addExp(amount){
+        Game._cheat = true;
+        Game.stats.xp += amount;
+    },
     // allows you to forcefully set amount of coins getting after one sec
     setPlusArekSec(amount){
         Game._cheat = true;
