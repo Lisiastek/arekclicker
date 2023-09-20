@@ -45,8 +45,8 @@ class GameCLASS{
         cpp_max: 100,
         power: 0,
         power_max: 0,
-        energy: 100,
-        energy_max: 100,
+        energy: 1000,
+        energy_max: 10000,
         food: 45,
         food_max: 100,
         level: 1,
@@ -107,7 +107,7 @@ class GameCLASS{
 
 
         // level checking
-        if(this._upgrades[id].levelMin != -1 && this._upgrades[id].levelMin < this.stats.level) return false;
+        if(this._upgrades[id].levelMin != -1 && this._upgrades[id].levelMin > this.stats.level) return false;
         if(this._upgrades[id].levelMax != -1 && this._upgrades[id].levelMax >= this.stats.level) return false;
 
 

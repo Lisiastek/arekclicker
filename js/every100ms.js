@@ -8,4 +8,6 @@ export function every100ms(Game){
     Game.render();
     centerActioner(Game);
     levelSystem(Game);
+
+    Game.stats.energy += 1;
 }
