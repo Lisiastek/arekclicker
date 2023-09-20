@@ -28,7 +28,6 @@
     border: 1px black solid;
 
     position: relative;
-    cursor: pointer;
 }
 .upgrades > img {
     max-width: 90%;
@@ -58,6 +57,10 @@
 }
 .nonbuyable {
     filter:grayscale(200%);
+    cursor:not-allowed;
+}
+.buyable {
+    cursor: pointer;
 }
 /* .upgrades {
     width: 25%;
