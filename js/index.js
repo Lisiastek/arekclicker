@@ -132,6 +132,7 @@ class GameCLASS{
         this._arek -= this.howMuchCost(id);
         this._arekpaid += this.howMuchCost(id);
         this._upgrades[id].obtained += 1;
+        this.stats.xp += this._upgrades[id].xpObtainedAfterbuy;
 
         this.getUpgradesTable();
         this.countPerClick();
@@ -214,6 +215,11 @@ class GameCLASS{
         else
         this._areklost += amount;
     }
+    // function to add xp
+    addExp(amount){
+        this.stats.xp += amount;
+    }
+
     // render everything that can be change (automatically doing every 100ms)
     render(){
         arekrender(Game);

@@ -26,6 +26,8 @@ export var upgrades = {
 
     //     multiplierAnotherItemsClick: { "itemID": percentPerItem}, IT DOESNT WORK
     //     multiplierAnotherItemsSec: { "itemID": percentPerItem}, IT DOESNT WORK
+
+    //     xpObtainedAfterbuy: 200, // exp that you will get after buy
     
 
     //     showInRightMenu: true, // that means is it will be showed in the right panel named "shop"
@@ -49,7 +51,7 @@ export var upgrades = {
         maxAmountToBuy: 99999,
         levelMin: 1,
         levelMax: -1,
-        
+
         
         addtoClickNum: 0.2,
         addtoClickMultiplierLocal: 0,
@@ -61,6 +63,8 @@ export var upgrades = {
 
         multiplierAnotherItemsClick: {},
         multiplierAnotherItemsSec: {},
+
+        xpObtainedAfterbuy: 200,
 
         showInRightMenu: true,
         rightMenuImg: "./img/ciplasplasbook.png",
