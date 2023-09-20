@@ -8,6 +8,7 @@ import { changeLocaction } from './bottomDIV_changelocaction.js';
 import { upgrades } from './upgrades.js';
 import { shopGen } from './shop.js';
 import { renderStats } from './renderstats.js';
+import {clickAc} from './clickaction.js';
  
 // Configuration
 
@@ -102,6 +103,7 @@ class GameCLASS{
         if(this._upgrades[id].useLocalizationsAvailable){
             if(!(this._upgrades[id].LocalizationsAvailable.includes(this._stateOfBottomCenter))) return false;
         }
+        if(this._upgrades[id].obtained >= this._upgrades[id].maxAmountToBuy) return false;
         return true;
 
 
@@ -118,7 +120,7 @@ class GameCLASS{
         if(!(this._arek >= this.howMuchCost(id))) return false;
 
         // max amount to buy
-        if(this._upgrades[id].obtained >= this._upgrades[id].maxAmountToBuy) return false;
+       
         return true;
     }
 
@@ -134,12 +136,27 @@ class GameCLASS{
         return true;
     }
 
+    // counts areks number obtained per click 
     countPerClick(){
         let sum = 1;
 
         this._upgradesTable.forEach((element) => {
+            // add basic
+            let temp = 0;
             for(let i=1; i <= element[1].obtained; i++)
-            sum += element[1].addtoClickNum + element[1].addtoClickNum * element[1].addtoClickMultiplierLocal * (element[1].obtained-1);
+            temp += element[1].addtoClickNum + element[1].addtoClickNum * element[1].addtoClickMultiplierLocal * (element[1].obtained-1);
+
+            // upgrades counting
+
+            this._upgradesTable.forEach((elementUPRG) => {
+                if(elementUPRG[1].multiplierAnotherItemsClick.hasOwnProperty(element[0])){
+                    temp += temp * elementUPRG[1].multiplierAnotherItemsClick[element[0]];
+                }
+            });
+
+            console.log(sum, temp);
+            sum += temp;
+
         });
         
         this._upgradesTable.forEach((element) => {
@@ -151,12 +168,24 @@ class GameCLASS{
         
     }
 
+    // counts areks number obtained per second
     countPerSec(){
         let sum = 0;
 
         this._upgradesTable.forEach((element) => {
+            let temp = 0;
+
             for(let i=1; i <= element[1].obtained; i++)
-            sum += element[1].addtoSecNum + element[1].addtoSecNum * element[1].addtoSecMultiplierLocal * (element[1].obtained-1);
+            temp += element[1].addtoSecNum + element[1].addtoSecNum * element[1].addtoSecMultiplierLocal * (element[1].obtained-1);
+
+
+            this._upgradesTable.forEach((elementUPRG) => {
+                if(elementUPRG[1].multiplierAnotherItemsSec.hasOwnProperty(element[0])){
+                    temp += temp * elementUPRG[1].multiplierAnotherItemsSec[element[0]];
+                }
+            });
+
+            sum += temp;
         });
         
         this._upgradesTable.forEach((element) => {
@@ -280,6 +309,10 @@ Game.render(); // first render to make game faster available
 
 // commands management (from console)
 window.game = {
+    // for helping actions
+    do(deaction){
+        clickAc(Game, deaction);
+    },
     // allows you to add particular amount of money through web browser
     earn(amount){
             Game._cheat = true;
