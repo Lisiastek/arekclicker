@@ -1,5 +1,4 @@
 export function renderStats(Game){
-    console.log(Game.help);
     let div = document.getElementById("stats");
     let divtemp = document.getElementById("tempstats");
     let temp = "";

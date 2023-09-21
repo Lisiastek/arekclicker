@@ -30,6 +30,12 @@ export function renderMain(Game){
         <div class="centerBottomLocation openLocaction" id="kasyno" onclick="game.enterLocaction('kasyno');">
             <img class="centerBottomLocationImage openLocactionImage" src="./img/arekvegas.png" draggable="false">
         </div>
+
+        <div class="centerBottomLocation ${Game.stats.level >= 3 ? "openLocaction":"closeLocaction"}" id="las" onclick="${Game.stats.level >= 3 ? "game.enterLocaction('las');" : ""}">
+            <img class="centerBottomLocationImage ${Game.stats.level >= 3 ? "openLocactionImage":"closeLocactionImage"}" src="./img/las.png" draggable="false">
+            <h2 class="centerBottomLocationText ${Game.stats.level >= 3 ? "openLocactionText" : "closeLocactionText"}" id="lasText">LAS (LV 3)</h2>
+        </div>
+
     `);
 
     return tempText;

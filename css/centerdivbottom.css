@@ -4,6 +4,57 @@
     width: 80px;
     cursor: pointer;
 }
+.openLocaction{
+    cursor:pointer;
+}
+.closeLocaction {
+    cursor:not-allowed;
+    /* filter:blur(2px); */
+}
+#las {
+    /* transform: scale(5); */
+    width: 30%;
+    height: 35%;
+    position: absolute;
+    top: -1%;
+    left: 40%;
+}
+#las #lasText{
+
+    transform:skewX(35deg);
+    font-weight: 800;
+    font-family: fantasy, sans-serif;
+    
+    font-size: 46px;
+    position: absolute;
+    top: 5%;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+#las.openLocaction #lasText {
+    color: pink;
+}
+#las.closeLocaction #lasText {
+    color: red;
+    text-decoration: line-through;
+
+}
+#las.closeLocaction #lasText::after {
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform:translateX(-50%);
+    display: block;
+    content: "ZABLOKOWANE";
+    font-size: 12px;
+    color:rgb(185, 27, 27);
+}
+
+#las:hover #lasText {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
 .centerBottomLocationImage {
     width: 25px;
     height: 25px;
