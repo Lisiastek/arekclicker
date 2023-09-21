@@ -11,8 +11,55 @@
     <link rel="stylesheet" href="css/stokrotkainside.css" type="text/css">
     <link rel="stylesheet" href="css/docs.css" type="text/css">
     <link rel="stylesheet" href="css/stats.css" type="text/css">
+    <link rel="stylesheet" href="css/las.css" type="text/css">
 
-    <script src="js/index.js?version=5" type="module"></script>
+    <script src="js/index.js?version=6" type="module"></script>
+    <script>
+        // // function afterT(xmlGz){
+        // //     const xmlDoc = xmlGz.responseXML;
+        // //     const info = xmlDoc.getElementsByTagName("page").getElementsByTagName("version");
+        // //     console.log(info);
+
+
+        // // }
+        // function checkIsUpdated(){
+        //     if(!navigator.onLine){
+        //         return;
+        //     }
+        //     const XMLG = new XMLHttpRequest();
+        //     XMLG.onload = () => {
+        //         const xmlDoc = this.responseXML;
+        //         const info = xmlDoc.getElementsByTagName("page");
+        //         print(info);
+        //     }
+        //     XMLG.open("GET", "info.xml", true);
+        //     XMLG.send();
+        // }
+        // checkIsUpdated();
+        // // setInterval(10000, checkIsUpdated);
+        function loadFile(filePath) {
+            var result = null;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", filePath, false);
+            xmlhttp.send();
+            if (xmlhttp.status==200) {
+                result = xmlhttp.responseText;
+            }
+            return result;
+        }
+        function checkVer(){
+            let result = loadFile("version.txt");
+            if(result!="1.2 ALPH"){
+                let decision = confirm("Aktualna wersja twojego klienta to: 1.0 a powinno być "+String(result)+". Czy chcesz przeładować stronę by uzyskać najnowsze updaty? Uwaga to wykasuje twój postęp jeżeli nie posiadasz savów!");
+                if(decision){
+                    location.reload();
+                }
+            }
+        }
+        checkVer();
+        setInterval(10000, checkVer);
+
+    </script>
 </head>
 <body>
     <canvas id="backgroundCanvas"></canvas>
