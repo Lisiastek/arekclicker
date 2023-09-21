@@ -10,6 +10,7 @@ import { renderDocs } from "./bottomDIV_docs.js";
 import { renderInformation } from "./bottomDIV_information.js";
 import { renderDocs_gvar } from "./bottomDIV_docs_globvar.js";
 import { renderLas } from "./bottomDIV_las.js";
+import { renderSettings } from "./bottomDIV_settings.js";
 
 // render of center div
 export function rendercenter(Game){
@@ -54,6 +55,9 @@ function renderbottom(Game){
             break;     
         case 'las':
             temp = renderLas(Game);
+            break;
+        case 'settings':
+            temp = renderSettings(Game);
             break;
     }
 

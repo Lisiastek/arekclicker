@@ -1,0 +1,34 @@
+#centerB[scene="settings"]{
+    color: white;
+    font-size: 28px;
+}
+#centerB[scene="settings"] h1 {
+    font-size: 56px;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.SetBtn {
+    background: #233142;;
+    outline: none;
+    border: none;
+    border: 1px white solid;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 19px;
+}
+.klm {
+    gap: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.setting {
+    font-size: 20px;
+    margin: 10px 0px;
+}
+.setting input[type="checkbox"]{
+    transform: scale(3);
+    margin: 30px;
+}

@@ -9,6 +9,7 @@ import { upgrades } from './upgrades.js';
 import { shopGen } from './shop.js';
 import { renderStats } from './renderstats.js';
 import {clickAc} from './clickaction.js';
+import { checkVarForOtherPlaces } from '../updater.js';
  
 // Configuration
 
@@ -383,6 +384,9 @@ window.game = {
     // forcefully show alert that had you got at the beginning
     showAlert(){
         document.getElementById('blank').style.display = "flex";
+    },
+    checkVersion(){
+        checkVarForOtherPlaces();
     }
 
 };

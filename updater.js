@@ -20,4 +20,8 @@ function checkVar(){
         }
     }
 }
+export function checkVarForOtherPlaces(){
+    hasdecision = false;
+    checkVar();
+}
 setInterval(checkVar,500);
