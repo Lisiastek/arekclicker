@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/stats.css" type="text/css">
     <link rel="stylesheet" href="css/las.css" type="text/css">
 
-    <script src="js/index.js?version=6" type="module"></script>
+    <script src="js/index.js?version=9" type="module"></script>
     <script>
         // // function afterT(xmlGz){
         // //     const xmlDoc = xmlGz.responseXML;
@@ -37,29 +37,9 @@
         // }
         // checkIsUpdated();
         // // setInterval(10000, checkIsUpdated);
-        function loadFile(filePath) {
-            var result = null;
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.open("GET", filePath, false);
-            xmlhttp.send();
-            if (xmlhttp.status==200) {
-                result = xmlhttp.responseText;
-            }
-            return result;
-        }
-        function checkVer(){
-            let result = loadFile("version.txt");
-            if(result!="1.2 ALPH"){
-                let decision = confirm("Aktualna wersja twojego klienta to: 1.0 a powinno być "+String(result)+". Czy chcesz przeładować stronę by uzyskać najnowsze updaty? Uwaga to wykasuje twój postęp jeżeli nie posiadasz savów!");
-                if(decision){
-                    location.reload();
-                }
-            }
-        }
-        checkVer();
-        setInterval(10000, checkVer);
 
     </script>
+    <script src="updater.js"></script>
 </head>
 <body>
     <canvas id="backgroundCanvas"></canvas>
